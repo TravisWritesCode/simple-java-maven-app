@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                snykSecurity additionalArguments: 'foo', failOnIssues: false, snykInstallation: 'personalSnyk', snykTokenId: 'snykPersonalToken'
+                snykSecurity additionalArguments: '\nsnyk code test', failOnIssues: false, snykInstallation: 'personalSnyk', snykTokenId: 'snykPersonalToken'
                 echo 'Testing..'
             }
         }
